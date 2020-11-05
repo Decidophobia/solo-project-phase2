@@ -1,3 +1,9 @@
-const app = require('express')()
+const app = require('express')();
+const middleware = require('./middleware/index');
+const generalRouter = require('./routes/index');
 
-module.exports = app
+middleware(app);
+
+app.use('/', generalRouter);
+
+module.exports = app;
