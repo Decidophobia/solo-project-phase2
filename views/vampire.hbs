@@ -1,0 +1,30 @@
+<div class="wrap" style="background: url('https://cutewallpaper.org/21/vampire-the-masquerade-wallpapers/Vampire-The-Masquerade-Bloodlines-2-preview-Rock-Paper-.jpg') no-repeat;"></div>
+<div class="container center">
+<h1>Vampire: The Masquerade® - Bloodlines™ 2 news</h1>
+<div class="row">
+{{#each newsArr}}
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://images.gog-statics.com/778e87fd2dbe9b9603521ef0a8cd7df5cbf37f946d3c59eb8b324d1518b056a7_product_card_v2_mobile_slider_639.jpg">
+          <span class="card-title purple darken-4">{{this.title}}</span>
+        </div>
+        <div class="card-content">
+          {{this.contents}}
+        </div>
+        <div class="card-action">
+          <script>
+            function EpochToHuman(){
+	            const datum = new Date({{this.date}} * 1000);
+	            {{!-- alert(datum.toLocaleString()); --}}
+              }
+            EpochToHuman()
+          </script>
+          <a href="{{this.url}}">{{this.feedname}}</a>
+          <time datetime="{{this.date}}">{{this.date}}</time>          
+        </div>
+      </div>
+    </div>
+{{/each}}
+</div>
+</div>
