@@ -12,7 +12,6 @@ fetch(
     //получили конкретный элемент (объект)
     .then((json) => {
       res.render('cyberpunk', { newsArr: json.appnews.newsitems });
-      // console.log(json.appnews.newsitems);
     });
 };
 
